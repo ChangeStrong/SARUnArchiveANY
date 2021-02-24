@@ -213,6 +213,10 @@
     completionBlock(filePaths);
 }
 
+- (void)zipArchiveDidUnzipArchiveAtPath:(NSString *)path zipInfo:(unz_global_info)zipInfo unzippedPath:(NSString *)unzippedPath{
+    completionBlock(@[unzippedPath]);
+}
+
 
 #pragma mark - Utility Methods
 - (NSString *) applicationDocumentsDirectory
